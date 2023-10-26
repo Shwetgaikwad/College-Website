@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/home.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <div class="image">
+      <img src="images/name.png" width="100%">
+    </div>
+    <div class="navbar">
+      <a href="home.html"><i class="fa fa-fw fa-aboutus"></i> Home</a>
+      <a href="about.html"><i class="fa fa-fw fa-aboutus"></i>About Us</a>
+
+      <div class="dropdown">
+        <button class="dropbtn"><i class="fa fa-fw fa-mission"></i>Academics</button>
+        <div class="dropdown-content">
+          <a href="course.html">Courses Offered</a>
+          <a href="fee.html">Fees Structed</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn"><i class="fa fa-fw fa-mission"></i>Department</button>
+        <div class="dropdown-content">
+          <a href="cs.html">CS & IT</a>
+          <a href="bio.html">Biotechnology and Bioinformatics</a>
+          <a href="ele.html">Electronics</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn"><i class="fa fa-fw fa-mission"></i>Contact</button>
+        <div class="dropdown-content">
+          <a href="enquiry.html">Admission Enquiry</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+
+        <img src="images/col2.jpg" style="width: 100%;">
+      </div>
+      <div class="mySlides fade">
+
+        <img src="images/col10.png" style="width: 100%;">
+        <div class="text"></div>
+      </div>
+
+      <div class="mySlides fade">
+
+        <img src="images/col3.png" style="width: 100%;">
+        <div class="text"></div>
+      </div>
+      <div class="mySlides fade">
+
+        <img src="images/col1.jpg" style="width: 100%;">
+        <div class="text"></div>
+      </div>
+      <div class="mySlides fade">
+
+        <img src="images/col9.jpg " style="width: 100%;">
+        <div class="text"></div>
+      </div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+  </main>
+  <div class="container">
+    <h2>Welcome to PCACS</h2>
+
+    <p>University Grants Commission, New Delhi has conferred Autonomous Status to Pillai College of Arts, Commerce and
+      Science on 24th June, 2019. The institution has risen from a simple beginning in 1998 to be the most popular
+      institution catering successfully to the needs of rural, urban and global students with eight under-graduate and
+      four post graduate programmes to over 4000 students.</p>
+
+    <p>We are permanently affiliated to the University of Mumbai and recognized by U.G.C. under 2(f) and 12(B). The
+      college
+      is ISO 9001:2015 certified and is accredited by NAAC with the prestigious ‘A’ Grade in all the three cycles of
+      accreditation.</p>
+  </div>
+
+  <footer>
+    <div class="social-media">
+      <h2>Follow Us</h2>
+      <a href="https://www.facebook.com/pillaicollege" class="social-icon" id="facebook"><img src="images/fb.jpeg" alt="Facebook"></a>
+      <a href="https://twitter.com/pillaicollege" class="social-icon" id="twitter"><img src="images/twitter.png" alt="Twitter"></a>
+      <a href="https://www.instagram.com/pillaiscollege/" class="social-icon" id="instagram"><img src="images/insta.jpeg" alt="Instagram"></a>
+  </div>
+    <div class="button-links">
+      <a href="home.html">Home</a>
+      <a href="enquiry.html">Enquiry</a>
+      <a href="about.html">About us</a>
+  </div>
+    <div class="address">
+      <h5>Address</h5>
+      Pillai College of
+      Arts Commerce And Science
+      (Autonomous)<br>
+      Dr. K. M. Vasudevan Pillai Campus
+      Plot No. 10,<br>
+      Sector 16 New Panvel Navi Mumbai,<br />
+      Mumbai– 410 206,<br />
+      Maharashtra, India<br />
+        <p>Email:shwetan21cs@student.mes.ac.in</p>
+    </div>
+    <div class="copyright">
+      <p>&copy;  All rights reserved.</p>
+    <p>Created By S.N.Gaikwad</p>
+  </div>
+    
+</footer>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      if (n > slides.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex - 1].style.display = "block";
+    }
+  </script>
+</body>
+
+</html>
